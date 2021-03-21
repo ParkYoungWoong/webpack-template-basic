@@ -5,6 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: './js/main.js',
   output: {
+    // 기본값!
     // path: path.resolve(__dirname, 'dist'),
     // filename: 'main.js',
     clean: true
@@ -21,10 +22,6 @@ module.exports = {
       }
     ]
   },
-  devServer: {
-    host: 'localhost',
-    hot: true
-  },
   plugins: [
     new HtmlPlugin({
       template: './index.html',
@@ -34,5 +31,9 @@ module.exports = {
         { from: 'static' }
       ]
     })
-  ]
+  ],
+  devServer: {
+    host: 'localhost',
+    hot: true
+  }
 }
