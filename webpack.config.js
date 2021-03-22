@@ -20,6 +20,12 @@ module.exports = {
           'postcss-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.js/,
+        use: [
+          'babel-loader'
+        ]
       }
     ]
   },
@@ -35,6 +41,7 @@ module.exports = {
   ],
   devServer: {
     host: 'localhost',
+    port: 8080,
     hot: true
   }
 }
