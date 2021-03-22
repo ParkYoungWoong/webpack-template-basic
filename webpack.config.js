@@ -14,7 +14,7 @@ module.exports = {
     // filename: 'main.js',
     clean: true
   },
-  
+
   // 모듈 처리 방식을 설정
   module: {
     rules: [
@@ -29,7 +29,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.js/,
+        test: /\.js$/,
         exclude: /node_modules/, // 제외할 경로
         use: [
           'babel-loader'
